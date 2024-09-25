@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Nos Choix</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="https://cdn.plot.ly/plotly-2.30.0.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+	</head>
+	
+	<body>
+		<main>
+			<div class="bg-ligth">
+				<div class="container">
+					<header>
+						<nav class="navbar navbar-expand">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">Dashboard</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="choix.html">Nos choix</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="analyse.html">Analyse</a>
+									</li>
+								</ul>
+							</a>
+						</nav>
+					</header>
+				</div>
+			</div>
+			<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-10 titre">
+					<h2>Production électrique par filière en France</h2>
+					<p>Elias Ramili & Alexandre Bouvier</p>
+				</div>
+				<div class="col-lg-2">
+					<div class="boite" id="logo">
+						<img src="img/logo_polytech.jpg" alt="logo de polytech" width="245" height="145"></img>
+					</div>
+				</div>
+			</div>
+				<div class="boite">
+					<h1>Nos Choix d'Indicateurs</h1>
+						<p>
+							Dans nos donnees, nous avons les differentes quantités d'energies éléctriques produites par filières (en MWh), ainsi que le nombre de sites de production, selon les differents departements francais, pour chaque année entre 2011 et 2022. Nous aurons besoins d'indicateurs illustrant ces quantités en fonction du temps, mais aussi en fonction de la zone geographique. Au lieu de rajouter des indicateurs pour chaque type de filière (éolien, hydrauliquen,...), nous aurons besoin de rajouter un menu deroulant pour selectionner celle qui nous interesse. Nous souhaitons également rajouter des indicateurs consacrés uniquement à l'eolien, car il s'agit d'une filière importante pour les enjeux environnementaux actuels.
+						</p>
+					<h3>Indicateur 1: Graphique de Zones Empilées</h3>
+						<p>
+							Nous voulions un indicateur illustrant l'evolution de la quantité produite d'énergie pour chaque fillière, en MWh, au cours du temps, entre 2011 et 2022. Nous avions donc le choix entre un graphique supperposant des courbes (une courbe pour chaque filière), ou un graphique de zones empilées (une filière par zone). Nous sommes donc partis sur le graphique des zones car l'indicateur permet plus facilement de pouvoir comparer les differentes evolutions. De plus, on peut connaitre la quantité d'energie produite totale chaque année, en regardant le sommet de toutes les zones empilées.
+						</p>
+					<h3>Indicateur 2: La Carte</h3>
+						<p>
+							La carte indique la concentration de site de production d'energie éolienne sur toute la France. Plus la zone entourant le departement est grande, plus il y a de sites éoliens dans celui-ci. Nous avions besoins d'illustrer une concentration, en fonction d'une zone geographique, donc une carte nous a semblées être un indicateur pertinant.
+						</p>
+					<h3>Indicateur 3: Les variations</h3>
+						<p>
+							Cet indicateur indique l'augmentation, en pourcent, de la quantité d'eneregie eolienne et hydraulique produite entre 2011 et 2022. Nous avons choisit l'éolien, car ces dernieres années, la France s'est fixé comme objectif d'augmenter drastiquement la production d'energie éolienne, à des fins environnementales. Nous avons également décidé d'afficher l'evolution d'une autre filière, à titre de comparaison, pour verifier si la France a bel et bien tenu les objectifs qu'elle s'etait fixés.    
+						</p>
+					<h3>Indicateur 4: Le diagramme en barre</h3>
+						<p>
+							Cet indicateur nous sert à illustrer la quantité d'energie produite en MWh (variable quantitative), en fonction de la région (variable qualitative). Nous avons donc choisit un diagramme en barre. On a aussi ajouté un menu deroulant, servant à choisir, parmi les types d'energies presentes dans les données, celui à afficher sur le diagramme. Les quantités produites sont celles de 2022, l'année la plus récente de notre base de donnée. 
+						</p>
+					<h3>Indicateur 5: Le classement des départements</h3>
+						<p>
+							Cet indicateur affiche, en fonction de l'energie selectionnée dans le menu deroulant, les trois departements francais qui ont produit le plus de cette filière, en 2022, avec la quantité en MWh affichée. Alors que le diagramme compare la production électrique des régions francaises, ce top 3, nous donne une comparaison à l'échelle départementale.  
+						</p>	
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+		<script src="readfile.js"></script>
+		<script src="indicateur.js"></script>
+		
+	</body>
+</html>

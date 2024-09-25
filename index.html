@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dashboard energie</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="https://cdn.plot.ly/plotly-2.30.0.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+	</head>
+	
+	<body>
+		<main>
+			<div class="bg-ligth">
+				<div class="container">
+					<header>
+						<nav class="navbar navbar-expand">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">Dashboard</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="choix.html">Nos choix</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="analyse.html">Analyse</a>
+									</li>
+								</ul>
+							</a>
+						</nav>
+					</header>
+				</div>
+			</div>
+			<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-10 titre">
+					<h2>Production électrique par filière en France</h2>
+					<p>Elias Ramili & Alexandre Bouvier</p>
+				</div>
+				<div class="col-lg-2">
+					<div class="boite" id="logo">
+						<img src="img/logo_polytech.jpg" alt="logo de polytech" width="245" height="145"></img>
+					</div>
+				</div>
+			</div>
+				
+				<div class="row">
+					<div class="boite" id="load">
+						<div>
+			  				<p>Select local CSV File:</p>
+			  				<input id="csv" type="file" accept=".csv">
+						</div>
+						<button>Load</button>
+						<pre id="out"><p>File contents will appear here</p></pre>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="boite" id="courbes">
+						</div>
+						<div class="boite" id="carte">
+							<div class="boite" id="map">
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-lg-6">
+						<div class="boite" id="variations">
+							<h5>
+								Variation de la quantité d'energie produite entre 2011 et 2022
+							</h5>
+							<div id="var1">
+							</div>
+							<div id="var2">
+							</div>
+						</div>
+						<div>
+							<select id="selection">
+								<option value="hydraulique">hydraulique</option>
+								<option value="photovoltaique">photovoltaique</option>
+								<option value="eolien">éolien</option>
+								<option value="bio_energie">bio-énergie</option>
+								<option value="cogeneration">cogénération</option>
+							</select>
+							
+							<button id="valider">valider</button>
+						<div>
+						<div class="boite" id="barres">
+						</div>
+						<div class="boite" id="classement">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+		<script src="readfile.js"></script>
+		<script src="indicateur.js"></script>
+		
+	</body>
+</html>
+
+
+

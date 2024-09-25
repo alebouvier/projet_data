@@ -1,0 +1,71 @@
+body{
+	background-color: rgb(238,253,255);
+}
+
+.boite{
+	background-color: rgb(255,255,255);
+	margin: 2.5% 0%;
+}
+
+.bg-ligth{
+	background-color:rgb(249,249,249);
+}
+
+a{
+	color : rgb(67,69,70);
+	font-family : "Times New Roman";
+	font-weight: bold;
+}
+
+.navbar-brand{
+	font-family : "Times New Roman";
+	font-weight: bold;
+}
+
+.titre{
+	background-color: rgb(255,255,255);
+	margin: 2.5% 0%;
+	height: 145px;
+	width:1200px;
+	color: rgb(0,170,255);
+	font-family : "Times New Roman";
+	font-weight: bold;
+	position:relative;
+}
+
+
+#load{
+	width :1200px;
+	height:228px;
+}
+
+#courbes{
+	width:550px;
+	height:600px;
+}
+
+#carte{
+	width:550px;
+	height:700px;
+}
+
+
+#variations{
+	width:550px;
+	height:500px;
+}
+
+#barres{
+	width:550px;
+	height:600px;
+}
+
+#classement{
+	width:550px;
+	height:150px;
+}
+
+#map {
+        width: 28.625vw;
+        height: 60vh;
+      }
